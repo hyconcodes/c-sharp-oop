@@ -10,10 +10,10 @@
 
             public Animal(int age, string name, string ownerName, int monthNumber)
             {
-                this.age = age;
-                this.name = name;
-                this.monthNumber = monthNumber;
-                this.ownerName = ownerName;
+                //this.age = age;
+                //this.name = name;
+                //this.monthNumber = monthNumber;
+                //this.ownerName = ownerName;
             }
 
             public string DisplayNewAnimal()
@@ -22,17 +22,8 @@
                 return $"Your pet name is {name} she's {age} years old, she's was born on {petMonth} month of the year, and your name is {ownerName}, you own the pet";
             }
 
-            public string Name
-            {
-                get
-                {
-                    return name;
-                }
-                set
-                {
-                    name = value;
-                }
-            }
+            public string Name { get => name; set => name = value; }
+            public int Age { get => age; set => age = value; }
         }
         
         static void Main(string[] args)
@@ -66,6 +57,8 @@
 
                 Animal pet = new Animal(Age, Name, OwnerName, MonthNo);
                 Console.WriteLine(pet.DisplayNewAnimal());
+
+                //Using Get and Set
                 Console.WriteLine(pet.Name = "Hycon45"); // cannot be use on private variables
                 //Console.WriteLine($"{pet.name} - {pet.age} - {pet.monthNumber} - {pet.ownerName}");
 
@@ -79,7 +72,7 @@
             
         }
 
-        //new animal
+        //new animal...
         //static string DisplayNewAnimal(string name, string ownerName, int age, int monthNo)
         //{
         //    Animal pet = new Animal(age, name, ownerName, monthNo);
